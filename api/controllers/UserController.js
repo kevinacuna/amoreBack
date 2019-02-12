@@ -26,15 +26,15 @@ module.exports = {
       name, age, gender, lookingForGender, major,
       relationshipStatus, email, password, instagram,
       profilePhoto: 'default.png',
-      username: req.body.email.split("@")[0], 
+      username: req.body.email.split('@')[0],
     };
 
-      req.file('profilePhoto').upload({
+    req.file('profilePhoto').upload({
       dirname: require('path').resolve(sails.config.appPath, '/profile_pics')
-    }, async function (err, uploadedFiles) {
+    }, async (err, uploadedFiles) => {
       let newUser;
       if (!err && uploadedFiles[0] !== undefined && uploadedFiles[0] !== null) {
-        newUserInfo.profilePhoto =  uploadedFiles[0].fd.split("\\")[2];
+        newUserInfo.profilePhoto =  uploadedFiles[0].fd.split('\\')[2];
         newUser = await User.create(newUserInfo).fetch();
         return res.send(newUser);
       } else {
@@ -59,7 +59,7 @@ module.exports = {
         user: findUser,
         type: 'old'
       };
-      
+
     }
     return res.send(resJSON);
   },
