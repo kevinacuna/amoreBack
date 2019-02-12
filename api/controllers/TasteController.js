@@ -39,14 +39,33 @@ module.exports = {
         return res.send(newLookingFor);
     },
     addUserTastes: async (req, res) =>{
-        let taste = {
-            lookingFor: JSON.parse(req.body.lookingFor),
-            preferences: JSON.parse(req.body.preferences),
-            personality: JSON.parse(req.body.personality),
-            email: req.body.email
-        };
-        let newTastes = await Taste.create(taste);
-        return res.send(newTastes);
+        const { email } = req.body;
+        let user = await User.find({ email }).limit(1);
+        let userPreference = JSON.parse(req.body.preferences);
+        if(userPreference.musica == undefined)
+            userPreference.musica = [];
+        if(userPreference.deportes == undefined)
+            userPreference.deportes = [];
+        if(userPreference.ocio == undefined)
+            userPreference.ocio = [];
+
+        if(!user)
+            return res.send({error: "error"});
+        else{
+            const taste = {
+                email: user[0].email,
+                lookingForGender: user[0].lookingForGender,
+                name: user[0].name,
+                major: user[0].major,
+                gender: user[0].gender,
+                relationshipStatus: user.relationshipStatus,
+                preferences: userPreference,
+                personality: JSON.parse(req.body.personality),
+                lookingFor: JSON.parse(req.body.lookingFor),
+            };
+            const newTastes = await Taste.create(taste).fetch();
+            return res.send(newTastes);
+        }
     },
     getUserTastes: async (req, res) =>{
         let tastes = await Taste.find({email: req.body.email});

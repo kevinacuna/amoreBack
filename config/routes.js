@@ -35,6 +35,10 @@ module.exports.routes = {
   'POST /updateLookingFor' : 'TasteController.updateLookingFor',
   'POST /getUserTastes' : 'TasteController.getUserTastes',
   'POST /addUserTastes' : 'TasteController.addUserTastes',
+  'POST /getUser' : 'UserController.getUser',
+  'POST /Matchmaking' : 'MatchmakingController.matchMaking',
+
+  
 
 
   /***************************************************************************

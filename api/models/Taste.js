@@ -26,6 +26,10 @@ module.exports = {
       type: 'string',
       required: true,
       unique: true
+    },
+    lookingForGender: {
+      type: 'string',
+      required: true,
     }
   },
 
