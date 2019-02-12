@@ -8,7 +8,7 @@ module.exports = {
 
   loginTestDB: async (req, res) => {
     let newUser = {
-      name: req.body.name,
+      name: "prueba",
       lastname: 'guapis',
       email: 'prueba@correo.com',
       password: '12345dfg'
