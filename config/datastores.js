@@ -48,7 +48,7 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    adapter: 'sails-mongo',
+    //adapter: 'sails-mongo',
     url: 'mongodb://amoredb:lPqqrSMayozOZmXLkJXEqRJVOrRUwqwaljNN1lOOWagBzDqsIXiUdsozuBApQoDyDMimoeferNOQJLLDoWAkhg==@amoredb.documents.azure.com:10255/amore?ssl=true&replicaSet=globaldb',
     //url: 'mongodb://milton:milton_2019@172.22.1.13:27017/amore',
     //url: 'mongodb://milton:milton_2019@localhost:27017/amore',
