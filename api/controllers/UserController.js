@@ -80,15 +80,15 @@ module.exports = {
     return res.send(resJSON);
   },
   login: async (req, res) => {
-    const { username, password } = req.body;
-    let loggedUser = await User.findOne({ username, password });
-    let loggedUserTaste = await Taste.findOne(loggedUser.email);
+    let loggedUser = await User.findOne({username: req.body.username, password: req.body.password});
+    let loggedUserTaste = await Taste.findOne({email: loggedUser.email});
     if(!loggedUserTaste){
       loggedUser.taste = "no taste";
     }
     else{
       loggedUser.taste = loggedUserTaste;
     }
+    console.log(loggedUser);
     return res.send(loggedUser);
   },
   getUser: async (req, res) => {
