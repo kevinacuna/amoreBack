@@ -1,4 +1,4 @@
-# test-project
+# amore-2
 
 a [Sails v1](https://sailsjs.com) application
 
@@ -14,9 +14,9 @@ a [Sails v1](https://sailsjs.com) application
 
 ### Version info
 
-This app was originally generated on Sun Feb 03 2019 19:31:46 GMT+0100 (Hora estándar romance) using Sails v1.1.0.
+This app was originally generated on Wed Feb 13 2019 12:32:08 GMT+0100 (Central European Standard Time) using Sails v1.1.0.
 
-<!-- Internally, Sails used [`sails-generate@1.16.0`](https://github.com/balderdashy/sails-generate/tree/v1.16.0/lib/core-generators/new). -->
+<!-- Internally, Sails used [`sails-generate@1.16.2`](https://github.com/balderdashy/sails-generate/tree/v1.16.2/lib/core-generators/new). -->
 
 
 

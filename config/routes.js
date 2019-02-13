@@ -19,22 +19,20 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/homepage' },
-  'POST /testDB': 'UserController.loginTestDB',
-  'POST /signup': 'UserController.signup',
-  'POST /loginGoogle': 'UserController.loginGoogle',
-  'POST /login': 'UserController.login',
-  'POST /addInfoToUser': 'UserController.addInfoToUser',
-  'POST /addPreferences' : 'TasteController.addPreferences',
-  'POST /addLookinFor' : 'TasteController.addLookinFor',
-  'POST /updatePreferences' : 'TasteController.updatePreferences',
-  'POST /updateLookingFor' : 'TasteController.updateLookingFor',
-  'POST /getUserTastes' : 'TasteController.getUserTastes',
-  'POST /addUserTastes' : 'TasteController.addUserTastes',
-  'POST /getUser' : 'UserController.getUser',
-  'POST /Matchmaking' : 'MatchmakingController.matchMaking',
-
-  
+ '/': { view: 'pages/homepage' },
+ 'POST /testDB': 'UserController.loginTestDB',
+ 'POST /signup': 'UserController.signup',
+ 'POST /loginGoogle': 'UserController.loginGoogle',
+ 'POST /login': 'UserController.login',
+ 'POST /addInfoToUser': 'UserController.addInfoToUser',
+ 'POST /addPreferences' : 'TasteController.addPreferences',
+ 'POST /addLookinFor' : 'TasteController.addLookinFor',
+ 'POST /updatePreferences' : 'TasteController.updatePreferences',
+ 'POST /updateLookingFor' : 'TasteController.updateLookingFor',
+ 'POST /getUserTastes' : 'TasteController.getUserTastes',
+ 'POST /addUserTastes' : 'TasteController.addUserTastes',
+ 'POST /getUser' : 'UserController.getUser',
+ 'POST /Matchmaking' : 'MatchmakingController.matchMaking',
 
 
   /***************************************************************************

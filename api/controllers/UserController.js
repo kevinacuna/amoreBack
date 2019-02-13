@@ -81,15 +81,20 @@ module.exports = {
   },
   login: async (req, res) => {
     let loggedUser = await User.findOne({username: req.body.username, password: req.body.password});
-    let loggedUserTaste = await Taste.findOne({email: loggedUser.email});
-    if(!loggedUserTaste){
-      loggedUser.taste = "no taste";
+    if(!loggedUser){
+      return res.send({error: "error"});
     }
     else{
-      loggedUser.taste = loggedUserTaste;
+      let loggedUserTaste = await Taste.findOne({email: loggedUser.email});
+      if(!loggedUserTaste){
+        loggedUser.taste = "no taste";
+      }
+      else{
+        loggedUser.taste = loggedUserTaste;
+      }
+      return res.send(loggedUser);
     }
-    console.log(loggedUser);
-    return res.send(loggedUser);
+    
   },
   getUser: async (req, res) => {
     const { email } = req.body;

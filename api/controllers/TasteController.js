@@ -41,7 +41,7 @@ module.exports = {
     addUserTastes: async (req, res) =>{
         const { email } = req.body;
         let user = await User.find({ email }).limit(1);
-        let userPreference = JSON.parse(req.body.preferences);
+        let userPreference = req.body.preferences;
         if(userPreference.musica == undefined)
             userPreference.musica = [];
         if(userPreference.deportes == undefined)
@@ -58,12 +58,13 @@ module.exports = {
                 name: user[0].name,
                 major: user[0].major,
                 gender: user[0].gender,
-                relationshipStatus: user.relationshipStatus,
+                relationshipStatus: user[0].relationshipStatus,
                 preferences: userPreference,
-                personality: JSON.parse(req.body.personality),
-                lookingFor: JSON.parse(req.body.lookingFor),
+                personality: req.body.personality,
+                lookingFor: req.body.lookingFor,
             };
             const newTastes = await Taste.create(taste).fetch();
+            console.log(newTastes);
             return res.send(newTastes);
         }
     },

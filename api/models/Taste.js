@@ -30,6 +30,22 @@ module.exports = {
     lookingForGender: {
       type: 'string',
       required: true,
+    },
+    name: {
+      type: 'string',
+      required: true,
+    },
+    major: {
+      type: 'string',
+      required: true,
+    },
+    gender: {
+      type: 'string',
+      required: true,
+    },
+    relationshipStatus: {
+      type: 'string',
+      required: true,
     }
   },
 

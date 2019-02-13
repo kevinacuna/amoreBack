@@ -52,7 +52,8 @@ module.exports.models = {
   * > https://sailsjs.com/docs/concepts/orm/model-settings#?migrate          *
   *                                                                          *
   ***************************************************************************/
-   migrate: 'safe',
+
+  migrate: 'alter',
 
 
   /***************************************************************************
@@ -100,7 +101,7 @@ module.exports.models = {
   ******************************************************************************/
 
   dataEncryptionKeys: {
-    default: 'Ig59YimgFzyXPhmuc1/zNlqNyAqzdpd71Ufl9c2b36A='
+    default: 'evU7o+0if2St7HT5A7ombmP7sgJeSjkJsLBZmrR0fck='
   },
 
 
