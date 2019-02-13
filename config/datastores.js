@@ -48,10 +48,10 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    //adapter: 'sails-mongo',
-    url: 'mongodb://amoredb:lPqqrSMayozOZmXLkJXEqRJVOrRUwqwaljNN1lOOWagBzDqsIXiUdsozuBApQoDyDMimoeferNOQJLLDoWAkhg==@amoredb.documents.azure.com:10255/amore',
+    adapter: 'sails-mongo',
+    //url: 'mongodb://amoredb:lPqqrSMayozOZmXLkJXEqRJVOrRUwqwaljNN1lOOWagBzDqsIXiUdsozuBApQoDyDMimoeferNOQJLLDoWAkhg==@amoredb.documents.azure.com:10255/amore',
     //url: 'mongodb://milton:milton_2019@localhost:27017/amore',
-    //url: 'mongodb://milton:milton_2019@amoredb-shard-00-00-qxmfc.azure.mongodb.net:27017,amoredb-shard-00-01-qxmfc.azure.mongodb.net:27017,amoredb-shard-00-02-qxmfc.azure.mongodb.net:27017/test?ssl=true&replicaSet=amoredb-shard-0&authSource=admin&retryWrites=true',
+    url: 'mongodb://milton:milton_2019@amoredb-shard-00-00-qxmfc.azure.mongodb.net:27017,amoredb-shard-00-01-qxmfc.azure.mongodb.net:27017,amoredb-shard-00-02-qxmfc.azure.mongodb.net:27017/test?ssl=true&replicaSet=amoredb-shard-0&authSource=admin&retryWrites=true',
 
   },
 
